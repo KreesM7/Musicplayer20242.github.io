@@ -24,7 +24,7 @@ color nightForeground=green, nightHoverover=yellow, nightBackground=black;
 color appColorForeground, appColorHoverover, appColorBackground;
 color stopButtonHoverOver;
 //
-Boolean colorDarkMode=false; //Preference: true or false //Future: Build Button for Dark Mode Preference
+Boolean colorDarkMode=true; //Preference: true or false //Future: Build Button for Dark Mode Preference
 //
 void setup()
 {
@@ -68,7 +68,8 @@ void setup()
   // Load Music
   String musicPathway = "Music/";
   String mp3FileName = ".mp3";
-  //Alphebetical order, same as OS ordering fil
+  //Alphebetical order, same as OS ordering file
+  String eureka = "Eureka";
   String ghostWalk = "Ghost_Walk";
   String groove = "groove";
   //
@@ -78,7 +79,6 @@ void setup()
   song[currentSong] = minim.loadFile( file );
   file = directory + ghostWalk + mp3FileName;
   song[currentSong+=1] = minim.loadFile( file );
-
   //
   currentSong = 0;
   //
@@ -142,7 +142,9 @@ void draw() {
   fill(stopButtonHoverOver);
   noStroke(); //Colour
   //
-  rect( stopX, stopY, stopWidth, stopHeight ); //(X, Y, width, height, roundedEdge1, roundedEdge2, roundedEdge3, roundedEdge4, )
+  strokeWeight(quitThikneesline);
+  line( quitButtonX1, quitButtonY1, quitButtonX2, quitButtonY2,);
+  //line( quitButtonX3, quitButtonY3, quitButtonX4, quitButtonY4);
   fill(255); //noFill(); //White in Gray Scale
   stroke(1); //Reset default
   //
